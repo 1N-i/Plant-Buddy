@@ -9,6 +9,8 @@ function createWindow() {
     maximizable: false,
     fullscreenable: false,
     center: true,
+    frame: false, //Hides the defult title bar
+    transparent: true, //App's background fully transparent
     alwaysOnTop: true, //Always stays visible on the desktop
     webPreferences: {
       nodeIntegration: true,
