@@ -1,5 +1,5 @@
 require('electron-reload')(__dirname) // electron-reload
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -19,6 +19,10 @@ function createWindow() {
   });
 
   win.loadFile('index.html');
+  
+  /* Window control ipc handlers - title bar buttons */
+  ipcMain.on('window:minimize', () => win.minimize());
+  ipcMain.on('window:close', () => win.close());
 };
 
 app.whenReady().then(createWindow);
