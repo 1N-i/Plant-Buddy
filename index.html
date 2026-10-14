@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- npm start -->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -15,10 +15,87 @@
 
         <link rel="stylesheet" href="style.css" />
     </head>
+
     <body>
-        <!-- App's content -->
         <div class="app" style="-webkit-app-region: drag;">
-            
+            <!-- Title bar -->
+            <div class="title-bar">
+                <h1 id="plants-name">Leafy</h1>
+                <div class="title-bar-btns">
+                    <button class="title-bar-btn" id="minimize">  <!-- Minimize button -->
+                    <img
+                        id="minimize-btn"
+                        alt="Minimize"
+                        src="assets/title-bar-btns/minimize-btn.png"
+                    />
+                    </button>
+                    <button class="title-bar-btn" id="close"> <!-- Close button -->
+                    <img
+                        id="close-btn"
+                        alt="Close"
+                        src="assets/title-bar-btns/close-btn.png"
+                    />
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Plant zone -->
+            <div class="plant-zone">
+                <!-- Plant illustration -->
+                <img 
+                    id="plant"
+                    alt="Plant"
+                    src="assets/leafy-stem-plant/leafy-stem-thriving.gif"
+                />
+                <div class="mood-tag"> <!-- Mood tag -->
+                    <p id="mood">Thriving</p>
+                </div>
+            </div>
+
+
+            <!-- Care reminder -->
+            <div class="care-reminder">
+                <span id="message">- All good here, just vibing -</span>
+            </div>
+
+
+            <!-- Water meter -->
+            <div class="water-meter">
+                <!-- Water label -->
+                <div class="water-label">
+                    <p id="water">Water</p>
+                    <p id="percentage">100%</p>
+                </div>
+                <!-- Water bar -->
+                <div class="water-bar">
+                    <div class="percentage-bar" id="bar-1">-</div>
+                    <div class="percentage-bar" id="bar-2">-</div>
+                    <div class="percentage-bar" id="bar-3">-</div>
+                    <div class="percentage-bar" id="bar-4">-</div>
+                    <div class="percentage-bar" id="bar-5">-</div>
+                    <div class="percentage-bar" id="bar-6">-</div>
+                    <div class="percentage-bar" id="bar-7">-</div>
+                    <div class="percentage-bar" id="bar-8">-</div>
+                    <div class="percentage-bar" id="bar-9">-</div>
+                    <div class="percentage-bar" id="bar-10">-</div>
+                </div>
+            </div>
+
+
+            <!-- Action buttons -->
+            <div class="action-btns">
+                <!-- Water button -->
+                <button id="water-btn" class="action-btn">
+                    <p class="name">Water</p>
+                    <span class="timer">READY</span>
+                </button>
+                <!-- Restart button -->
+                <button id="restart-btn" class="action-btn" style="display: none">
+                    <p class="name">Restart</p>
+                    <span class="timer">START OVER</span>
+                </button>
+            </div>
         </div>
 
         <script src="script.js"></script>
